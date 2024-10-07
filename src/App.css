@@ -1,0 +1,55 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f2f5;
+  margin: 0;
+}
+
+/* Table Styles */
+table {
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+td {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #333;
+  font-size: 2.5rem;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Cell Styles */
+td:hover {
+  background-color: #f7f7f7;
+}
+
+td:active {
+  background-color: #e9e9e9;
+}
+
+/* X and O Styles */
+td::selection {
+  background: none;
+}
+td::before {
+  content: attr(data-value);
+  color: #333;
+}
+
+[data-value="X"] {
+  color: #0d6efd;
+  font-weight: bold;
+}
+
+[data-value="O"] {
+  color: #ff6347;
+  font-weight: bold;
+}
